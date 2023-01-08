@@ -1,0 +1,15 @@
+{
+  "Prompt": "Filter>",
+  "StickySelection": true,
+  "Use256Color": true,
+  "Keymap": {
+    "C-a": "peco.SelectAll"
+  },
+  "Style": {
+    "Basic": ["on_default", "default"],
+    "SavedSelection": ["bold", "on_29", "white"],
+    "Selected": ["on_cyan", "black"],
+    "Query": ["white", "bold"],
+    "Matched": ["black", "on_white"]
+  }
+}
