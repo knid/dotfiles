@@ -64,7 +64,7 @@ setopt SHARE_HISTORY
 alias HideDesktopIcons='defaults write com.apple.finder CreateDesktop -bool false; killall Finder'
 alias ShowDesktopIcons='defaults write com.apple.finder CreateDesktop -bool true; killall Finder'
 alias vim="nvim"
-alias grepo='open https$(git remote get-url --push origin | cut -d":" -f 2)'
+alias grepo='open https:$(git remote get-url --push origin | cut -d":" -f 2)'
 alias ls="ls -p -G"
 alias ll="ls -la -G"
 alias g="git"
