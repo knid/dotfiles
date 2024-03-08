@@ -1,0 +1,14 @@
+#!/bin/bash
+p=$(zenity --password --text="Enter sudo password for s3fs")
+
+val=2
+while [ $val -eq 2 ]
+do 
+    sleep 1
+    ping 1.1.1.1 -c 1
+    val=$?
+done
+
+sleep 1
+echo $p | sudo -S s3fs knidbucket /mnt/personal-cloud -o passwd_file=/home/user1/.passwd-s3fs -ouid=1000,gid=1000,allow_other,mp_umask=002 
+notify-send  "s3 file storage successfully mounted"

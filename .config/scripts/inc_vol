@@ -1,0 +1,2 @@
+#!/bin/bash
+vol=$(pactl get-sink-volume @DEFAULT_SINK@ | head -n1 | cut -d/ -f2 | tr -d ' %'); if (( vol >= 100 )); then pactl set-sink-volume @DEFAULT_SINK@ 100%; else pactl set-sink-volume @DEFAULT_SINK@ +10%; fi;

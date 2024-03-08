@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ctime=$(date +"Screenshot_%F_%H-%M-%S")
+sc_path=~/Pictures/Screenshots/$(echo $ctime).png
+
+xwd -root | convert xwd:- $sc_path
+notify_event=$(notify-send -A Open -A Dissmis "Screenshot saved $(echo $sc_path)" )
+if [[ $notify_event == 0 ]]; then
+    xdg-open $sc_path
+fi
+

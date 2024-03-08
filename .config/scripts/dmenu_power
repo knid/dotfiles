@@ -1,0 +1,5 @@
+#!/bin/bash
+
+option=$(printf "poweroff\nreboot\nsuspend\nhybrid-sleep\nhibernate\nsuspend-then-hibernate" | dmenu)
+systemctl $option
+

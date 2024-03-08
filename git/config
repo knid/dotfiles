@@ -1,0 +1,24 @@
+[user]
+	name = Sinan Kanidağlı
+    email = sinan@knid.me
+[core]
+	editor = nvim
+	excludesfile = .gitignore_global
+[init]
+	defaultBranch = main
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[alias]
+  a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+  us = "!git status --short | grep 'A '| peco | awk '{print $2}' | xargs git restore --staged"
+  d = "diff"
+  s = "status"
+  c = "commit"
+  ap = "!f() { git add . && echo $1 }; f"
+[github]
+  user = knid
